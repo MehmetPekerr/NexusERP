@@ -1,0 +1,19 @@
+ınherıtance araç, kamyon sınıfından TÜREMİŞTİR
+araç -|> kamyon
+kedi hayvan sınıfındadır
+kare şekil sınıfındadır
+
+ımplementation kredikartı, ödeme YÖNTEMİNİ uygular
+kredi kartı ---|> ödeme
+dosya kaydedilir
+uçak uçabilir
+
+assocation SAHİPLİK VEYA İLİŞKİ
+öğrenci - kurs
+araba motora sahiptir
+yazıcı mürekkebe sahiptir
+
+dependency yazıcı, yazdırmak için kağıda BAĞIMLIDIR (kağıt yazıcının parçası değildir)
+yazıcı ---> kağıt
+öğretmen kaleme bağımlıdır
+restoran menüye bağımlıdır

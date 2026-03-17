@@ -1,0 +1,9 @@
+cd C:\Users\MP\Documents\NetBeansProjects\Mimari
+
+netstat -ano | findstr :8081
+
+taskkill /PID 24104 /F
+
+
+
+http://localhost:8081/Mimari/?continue

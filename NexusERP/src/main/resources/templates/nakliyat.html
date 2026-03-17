@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satış Kanalları</title>
+    <style>
+        /* Genel stil ayarları */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigasyon menüsü */
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .active {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Sayfa başlığı ve header */
+        header {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        /* Ana içerik stil ayarları */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        main p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Tablo stil ayarları */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #444;
+            color: white;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Form stil ayarları */
+        form {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer stil ayarları */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Mobil uyumlu ayar */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            form {
+                width: 80%;
+            }
+
+            table {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="/firma.html">Firma</a></li>
+            <li><a href="/firmabilgi.html">Firma Bilgileri</a></li>
+            <li><a href="/isplani.html">İş Planı</a></li>
+            <li><a href="/insankaynaklari.html">İnsan Kaynakları</a></li>
+            <li><a href="/depo.html">Depo</a></li>
+            <li><a href="/urun.html">Ürünler</a></li>
+            <li><a href="/bakim.html">Bakım</a></li>
+            <li><a href="/satiskanallari.html" class="active">Satış Kanalları</a></li>
+            <li><a href="/siparis.html">Sipariş</a></li>
+            <li><a href="/nakliyat.html">Nakliyat</a></li>
+            <li><a href="/sonuc.html">Sonuç</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header>
+        <h1>Satış Kanalları Yönetimi</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Satış Kanalları Listesi -->
+        <section id="satis-kanallari-listesi">
+            <h2>Mevcut Satış Kanalları</h2>
+            <p>Firmamızın mevcut satış kanallarının bilgileri aşağıda listelenmektedir.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kanal Adı</th>
+                        <th>Kanal Türü</th>
+                        <th>Açıklama</th>
+                        <th>Durum</th>
+                        <th>Aksiyonlar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>E-Ticaret</td>
+                        <td>Online</td>
+                        <td>Online satış platformları</td>
+                        <td>Aktif</td>
+                        <td><a href="/satiskanali-detay/eticaretsatis">Detay</a> | <a href="/satiskanali-duzenle/eticaretsatis">Düzenle</a></td>
+                    </tr>
+                    <tr>
+                        <td>Perakende</td>
+                        <td>Fiziksel</td>
+                        <td>Mağaza satışları</td>
+                        <td>Pasif</td>
+                        <td><a href="/satiskanali-detay/perakendekanal">Detay</a> | <a href="/satiskanali-duzenle/perakendekanal">Düzenle</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Yeni Satış Kanalı Ekleme Formu -->
+        <section id="yeni-satis-kanali">
+            <h2>Yeni Satış Kanalı Ekle</h2>
+            <form action="/satiskanali/ekle" method="post">
+                <label for="kanalAdi">Kanal Adı:</label>
+                <input type="text" id="kanalAdi" name="kanalAdi" required>
+
+                <label for="kanalTuru">Kanal Türü:</label>
+                <select id="kanalTuru" name="kanalTuru" required>
+                    <option value="Online">Online</option>
+                    <option value="Fiziksel">Fiziksel</option>
+                    <option value="Telefon">Telefon</option>
+                </select>
+
+                <label for="aciklama">Açıklama:</label>
+                <textarea id="aciklama" name="aciklama" rows="4" required></textarea>
+
+                <label for="durum">Durum:</label>
+                <select id="durum" name="durum" required>
+                    <option value="Aktif">Aktif</option>
+               

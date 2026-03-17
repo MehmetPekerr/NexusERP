@@ -1,0 +1,35 @@
+# Spring Boot veritabanı bağlantı ayarları
+spring.datasource.url=jdbc:postgresql://localhost:5432/YOUR_DB_NAME
+spring.datasource.username=YOUR_DB_USERNAME
+spring.datasource.password=YOUR_DB_PASSWORD
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# Hibernate ayarları
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.format_sql=true
+
+# Uygulama adı
+spring.application.name=NexusERP
+
+# Loglama
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+logging.level.org.springframework=INFO
+
+# Sunucu portu
+server.port=8083
+
+# Thymeleaf
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.html
+spring.mvc.view.prefix=/templates/
+spring.mvc.view.suffix=.html
+
+spring.main.web-application-type=servlet
+spring.resources.static-locations=classpath:/static/
+
+# Spring Security (geliştirme ortamı için)
+spring.security.user.name=user
+spring.security.user.password=YOUR_PASSWORD

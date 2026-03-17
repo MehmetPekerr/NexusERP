@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma Bilgileri</title>
+    <style>
+        /* Genel stil ayarları */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigasyon menüsü */
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Sayfa başlığı ve header */
+        header {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        /* Ana içerik stil ayarları */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        main p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Firma bilgileri stil ayarları */
+        .firma-bilgileri {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .firma-bilgileri p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        /* Form stil ayarları */
+        form {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        form input, form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        /* Firma yöneticileri stil ayarları */
+        #firma-yoneticileri ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        #firma-yoneticileri li {
+            margin: 10px 0;
+        }
+
+        #firma-yoneticileri strong {
+            font-weight: bold;
+        }
+
+        /* Footer stil ayarları */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Aktif menü öğesi */
+        .active {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Mobil uyumlu ayar */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            form, .firma-bilgileri {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="/firma.html">Firma</a></li>
+            <li><a href="/firmabilgi.html" class="active">Firma Bilgileri</a></li>
+            <li><a href="/isplani.html">İş Planı</a></li>
+            <li><a href="/insankaynaklari.html">İnsan Kaynakları</a></li>
+            <li><a href="/depo.html">Depo</a></li>
+            <li><a href="/urun.html">Ürünler</a></li>
+            <li><a href="/bakim.html">Bakım</a></li>
+            <li><a href="/satiskanallari.html">Satış Kanalları</a></li>
+            <li><a href="/siparis.html">Sipariş</a></li>
+            <li><a href="/nakliyat.html">Nakliyat</a></li>
+            <li><a href="/sonuc.html">Sonuç</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header>
+        <h1>Firma Bilgileri</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Firma Detayları Section -->
+        <section id="firma-detaylari">
+            <h2>Firma Genel Bilgileri</h2>
+            <p>Firmanın detaylı bilgileri burada görüntülenebilir ve düzenlenebilir.</p>
+            
+            <div class="firma-bilgileri">
+                <p><strong>Firma Adı:</strong> ABC Teknoloji A.Ş.</p>
+                <p><strong>Firma Adresi:</strong> İstanbul, Türkiye</p>
+                <p><strong>Firma Telefon:</strong> +90 123 456 7890</p>
+                <p><strong>Firma E-posta:</strong> info@abcteknoloji.com</p>
+            </div>
+
+            <form action="/firmabilgi-guncelle" method="post">
+                <label for="firmaAdi">Firma Adı:</label>
+                <input type="text" id="firmaAdi" name="firmaAdi" value="ABC Teknoloji A.Ş." required>
+                
+                <label for="firmaAdres">Firma Adresi:</label>
+                <input type="text" id="firmaAdres" name="firmaAdres" value="İstanbul, Türkiye" required>
+                
+                <label for="firmaTelefon">Firma Telefon:</label>
+                <input type="text" id="firmaTelefon" name="firmaTelefon" value="+90 123 456 7890" required>
+                
+                <label for="firmaEmail">Firma E-posta:</label>
+                <input type="email" id="firmaEmail" name="firmaEmail" value="info@abcteknoloji.com" required>
+                
+                <button type="submit">Bilgileri Güncelle</button>
+            </form>
+        </section>
+
+        <!-- Firma Yöneticileri Section -->
+        <section id="firma-yoneticileri">
+            <h2>Firma Yöneticileri</h2>
+            <p>Firma yöneticilerini burada görüntüleyebilirsiniz.</p>
+            <ul>
+                <li><strong>Mehmet Yılmaz</strong> - CEO</li>
+                <li><strong>Ayşe Demir</strong> - CFO</li>
+                <li><strong>Emre Kaya</strong> - CTO</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ABC Teknoloji A.Ş. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>

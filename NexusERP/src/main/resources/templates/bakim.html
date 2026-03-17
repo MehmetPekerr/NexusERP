@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekipman Bakım ve Teknik Destek</title>
+    <style>
+        /* Genel stil ayarları */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigasyon menüsü */
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        nav ul li a.active {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Sayfa başlığı ve header */
+        header {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        /* Ana içerik stil ayarları */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        main p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Form stil ayarları */
+        form {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        form input, form textarea, form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer stil ayarları */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Mobil uyumlu ayar */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            form {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="/firma.html">Firma</a></li>
+            <li><a href="/firmabilgi.html">Firma Bilgileri</a></li>
+            <li><a href="/isplani.html">İş Planı</a></li>
+            <li><a href="/insankaynaklari.html">İnsan Kaynakları</a></li>
+            <li><a href="/depo.html">Depo</a></li>
+            <li><a href="/urun.html">Ürünler</a></li>
+            <li><a href="/bakim.html" class="active">Bakım</a></li>
+            <li><a href="/satiskanallari.html">Satış Kanalları</a></li>
+            <li><a href="/siparis.html">Sipariş</a></li>
+            <li><a href="/nakliyat.html">Nakliyat</a></li>
+            <li><a href="/sonuc.html">Sonuç</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header>
+        <h1>Ekipman Bakım ve Teknik Destek</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Ekipman Bakım Section -->
+        <section id="ekipman-bakim">
+            <h2>Ekipman Bakım</h2>
+            <p>Bakım ID, Ekipman Adı, Bakım Tarihi, Bakım Personeli bilgilerini girerek bakım zamanı kontrolü yapabilirsiniz.</p>
+            <form action="/bakim" method="post">
+                <label for="bakimId">Bakım ID:</label>
+                <input type="text" id="bakimId" name="bakimId" required>
+                
+                <label for="ekipmanAdi">Ekipman Adı:</label>
+                <input type="text" id="ekipmanAdi" name="ekipmanAdi" required>
+                
+                <label for="bakimTarihi">Bakım Tarihi:</label>
+                <input type="date" id="bakimTarihi" name="bakimTarihi" required>
+                
+                <label for="bakimPersoneli">Bakım Personeli:</label>
+                <input type="text" id="bakimPersoneli" name="bakimPersoneli" required>
+                
+                <button type="submit">Bakım Kaydet</button>
+            </form>
+        </section>
+
+        <!-- Ürün Test Raporları Section -->
+        <section id="urun-test">
+            <h2>Ürün Test Raporları</h2>
+            <p>Sertifika geçerliliği, test türü ve sonuç bilgilerini buradan ekleyebilirsiniz.</p>
+            <form action="/urun-test" method="post">
+                <label for="testId">Test ID:</label>
+                <input type="text" id="testId" name="testId" required>
+                
+                <label for="testTuru">Test Türü:</label>
+                <input type="text" id="testTuru" name="testTuru" required>
+                
+                <label for="testTarihi">Test Tarihi:</label>
+                <input type="date" id="testTarihi" name="testTarihi" required>
+                
+                <label for="sonuc">Test Sonucu:</label>
+                <input type="text" id="sonuc" name="sonuc" required>
+                
+                <button type="submit">Test Raporu Kaydet</button>
+            </form>
+        </section>
+
+        <!-- Teknik Destek Section -->
+        <section id="teknik-destek">
+            <h2>Teknik Destek</h2>
+            <p>Destek talep detaylarını girerek teknik destek değerlendirmesi yapabilirsiniz.</p>
+            <form action="/teknik-destek" method="post">
+                <label for="destekId">Destek ID:</label>
+                <input type="text" id="destekId" name="destekId" required>
+                
+                <label for="destekAdi">Destek Adı:</label>
+                <input type="text" id="destekAdi" name="destekAdi" required>
+                
+                <label for="destekTarihi">Destek Talep Tarihi:</label>
+                <input type="date" id="destekTarihi" name="destekTarihi" required>
+                
+                <label for="cozum">Çözüm Açıklaması:</label>
+                <textarea id="cozum" name="cozum" required></textarea>
+                
+                <button type="submit">Teknik Destek Kaydet</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Şirket Adı. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>

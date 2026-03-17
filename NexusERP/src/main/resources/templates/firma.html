@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma Yönetimi</title>
+    <style>
+        /* Genel stil ayarları */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigasyon menüsü */
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Sayfa başlığı ve header */
+        header {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        /* Ana içerik stil ayarları */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        main p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Form stil ayarları */
+        form {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        form input, form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer stil ayarları */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Aktif menü öğesi */
+        .active {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Mobil uyumlu ayar */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            form {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="/firma.html" class="active">Firma</a></li>
+            <li><a href="/firmabilgi.html">Firma Bilgileri</a></li>
+            <li><a href="/isplani.html">İş Planı</a></li>
+            <li><a href="/insankaynaklari.html">İnsan Kaynakları</a></li>
+            <li><a href="/depo.html">Depo</a></li>
+            <li><a href="/urun.html">Ürünler</a></li>
+            <li><a href="/bakim.html">Bakım</a></li>
+            <li><a href="/satiskanallari.html">Satış Kanalları</a></li>
+            <li><a href="/siparis.html">Sipariş</a></li>
+            <li><a href="/nakliyat.html">Nakliyat</a></li>
+            <li><a href="/sonuc.html">Sonuç</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <header>
+        <h1>Firma Yönetimi</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Firma Bilgileri Section -->
+        <section id="firma-bilgileri">
+            <h2>Firma Bilgileri</h2>
+            <p>Firmanın genel bilgilerini buradan görüntüleyebilirsiniz.</p>
+            <form action="/firma-bilgileri" method="post">
+                <label for="firmaAdi">Firma Adı:</label>
+                <input type="text" id="firmaAdi" name="firmaAdi" required>
+                
+                <label for="firmaAdres">Firma Adresi:</label>
+                <input type="text" id="firmaAdres" name="firmaAdres" required>
+                
+                <label for="firmaTelefon">Firma Telefon:</label>
+                <input type="text" id="firmaTelefon" name="firmaTelefon" required>
+                
+                <label for="firmaEmail">Firma E-posta:</label>
+                <input type="email" id="firmaEmail" name="firmaEmail" required>
+                
+                <button type="submit">Firma Kaydet</button>
+            </form>
+        </section>
+
+        <!-- Firma İletişim Bilgileri Section -->
+        <section id="firma-iletisim">
+            <h2>Firma İletişim Bilgileri</h2>
+            <p>Firmanın iletişim bilgilerini güncelleyebilirsiniz.</p>
+            <form action="/firma-iletisim" method="post">
+                <label for="iletisimTelefon">İletişim Telefonu:</label>
+                <input type="text" id="iletisimTelefon" name="iletisimTelefon" required>
+                
+                <label for="iletisimEmail">İletişim E-posta:</label>
+                <input type="email" id="iletisimEmail" name="iletisimEmail" required>
+                
+                <button type="submit">İletişim Bilgilerini Güncelle</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Şirket Adı. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>
